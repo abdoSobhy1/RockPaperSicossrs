@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <div class="rules-modal">
+      <header>
+        <h2>Rules</h2>
+        <button class="btn close-btn">
+          <img src="./images/icon-close.svg" alt="close" />
+        </button>
+      </header>
+      <div>
+        <img src="images/image-rules.svg" alt="rules" />
+      </div>
+      <button class="btn close-btn phone-only">
+        <img src="./images/icon-close.svg" alt="close" />
+      </button>
+    </div>
+    <div class="backdrop"></div>
+    <div class="game-wrapper">
+      <div class="title">
+        <div class="game-title">
+          <h2>Rock</h2>
+          <h2>Paper</h2>
+          <h2>Scissors</h2>
+        </div>
+        <div class="score">
+          <span>Score</span>
+          <span class="value">0</span>
+        </div>
+      </div>
+      <div class="game">
+        <div class="options">
+          <div class="top">
+            <div class="option" data-value="r">
+              <img src="./images/icon-rock.svg" alt="rock" />
+            </div>
+            <div class="option" data-value="p">
+              <img src="./images/icon-paper.svg" alt="paper" />
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="option" data-value="s">
+              <img src="./images/icon-scissors.svg" alt="scissors" />
+            </div>
+          </div>
+          <div class="bg">
+            <img src="images/bg-triangle.svg" alt="" />
+          </div>
+        </div>
+        <div class="picks">
+          <div class="choice player-choice">
+            <h2 class="game-info__item--title">YOU PICKED</h2>
+            <div class="picked" data-value="r">
+              <img src="./images/icon-rock.svg" alt="rock" />
+            </div>
+          </div>
+          <div class="result">
+            <h2>You Win</h2>
+            <button class="btn play-again">Play Again</button>
+          </div>
+          <div class="choice computer-choice">
+            <h2 class="game-info__item--title">THE HOUSE PICKED</h2>
+            <div class="picked" data-value="p">
+              <img src="./images/icon-paper.svg" alt="paper" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rules">
+        <button class="btn">Rules</button>
+      </div>
+    </div>
+  </body>
+</html>
