@@ -140,7 +140,7 @@ body {
 }
 
 .game {
-  width: min(90%, 800px);
+  width: min(95%, 800px);
   display: flex;
   justify-content: center;
 }
@@ -234,6 +234,7 @@ body {
   background-color: var(--bg-color);
   z-index: -2;
   transition: 0.3s;
+  display: block;
 }
 
 .game .options .option::before,
@@ -249,6 +250,7 @@ body {
   border-top-width: calc(var(--border-size) / -2);
   z-index: 0;
   transition: 0.3s;
+  display: block;
 }
 
 .game [data-value="r"] {
@@ -276,6 +278,12 @@ body {
 .game .options .bg {
   position: absolute;
   z-index: -3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .rules {
@@ -298,12 +306,20 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .game .options {
+  .game .options,
+  .game .picks {
     width: 290px;
     height: 260px;
   }
-  .game .options .option {
-    width: 100px;
+  .game .options .option,
+  .game .picked {
+    width: min(80px, 20vw);
+    height: min(80px, 20vw);
+    --border-size: -0.8rem;
+  }
+  .game .options .option img,
+  .game .picked img {
+    width: 80%;
   }
   .rules {
     margin-inline: auto;
@@ -323,6 +339,7 @@ body {
 .game.playing .picks {
   opacity: 1;
   scale: 1;
+  margin-top: 30px;
 }
 
 .game .picks .choice {
@@ -378,8 +395,8 @@ body {
     justify-content: center;
   }
   .game .picks .choice {
-    width: 170px;
-    gap: 50px;
+    width: 128px;
+    gap: 30px;
   }
   .game .picks .choice h2 {
     font-size: 1rem;
@@ -389,7 +406,7 @@ body {
   }
 
   .game .result {
-    margin-top: 90px;
+    margin-top: 30px;
     order: 3;
   }
 }

@@ -119,7 +119,6 @@ let rulesVisivle = false;
 rulesButton.addEventListener("click", toggleRules);
 closeRules.forEach(button => {
     button.addEventListener("click", toggleRules);
-    console.log(button);
 });
 backdrop.addEventListener("click", toggleRules);
 
